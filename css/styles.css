@@ -141,6 +141,44 @@ main h2 {
     background-color: rgba(225, 225, 225, 0.12);
 }
 
+/* ------------------ THE DROPDOWN --------------------- */
+/* 1. the parent <li> is the "anchor" the submenu is positioned against that anchor */
+.dropdown {
+    position: relative;
+}
+
+/* The submenu is hidden and placed directly under its parent */
+.submenu {
+    display: none !important;
+    position: absolute;
+    top: 100%; /* start right below the parent link */
+    left: 0;
+    min-width: 200px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: var(--ink);
+    box-shadow: 0 6px 12px rgba(0,0,0, 0.25);
+    z-index: 10;
+}
+
+.submenu a {
+    font-weight: 400;
+    border-top: 1px solid rgba(225,225,225, 0.1);
+}
+
+/* 3. Show the submenu on mouse hover OR when a link inside has KEYBOARD focus.
+    :focus-visible matches only keyboard (Tab) focus, not a mouse click.
+    so once the mouse rolls off the menu, the sub menu hides again. */
+.dropdown:hover .submenu,
+.dropdown:has(:focus-visible) .submenu {
+    display: block !important;
+}
+
+/*Small arrow after links that have a dropdown */
+.dropdown > a::after {
+    content: " \25BE"; /* Arrow Character */
+}
 
 /* -----------------4. About Section (GRID) -------------------- */
 .about {
