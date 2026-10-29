@@ -18,5 +18,16 @@
     # print("World!")
 
 # ---- Experiment 5: 0 DIVISION ERROR --------
-print("about to divide")
-print("1 / 0")
+#print("about to divide")
+#print("1 / 0")
+
+# ---- Experiment 6: LOGIC ERROR --------
+# We want the AVERAGE of three test scores.
+# Expected: (90 + 80 + 70) / 3 = 80.0
+score1 = 90
+score2 = 80
+score3 = 70
+
+avergae = (score1 + score2 + score3) / 3
+
+print("Average:", average)
