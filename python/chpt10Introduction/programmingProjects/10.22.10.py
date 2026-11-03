@@ -1,5 +1,5 @@
 print(" /\_/\     -----")
-print("( ''' )  / Hello |")
-print("(  -  ) <  Junior |")
-print(" | | |   \ Coder!/")
+print("( ''' )  /       |")
+print("(  -  ) <  hello |")
+print(" | | |   \      /")
 print("(__|__)    -----")
