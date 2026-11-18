@@ -55,10 +55,47 @@ def demo4_floor_and_mod():
     minutes = screenMinutes % MPH
     print(hours, "hours and", minutes, "minutes")
 
-
+    # Convert a video length in seconds to minutes and hours
     import math
 
     radius = math.sqrt(50)
     print(round(math.pi * radius ** 2, 2))
 
+    # Digit Tricks
+    n = 2026
+    print("Last digit:", n % 10)
+    print("without last digit:", n // 10)
+
 demo4_floor_and_mod()
+
+
+#DEMO 5 built in functions, the math module, roundoff (11.2)
+print("\n\nDEMO 5 built in functions, the math module, roundoff (11.2)")
+
+def demo5_functions():
+    from math import sqrt, pi
+
+    # Built in functions: no import needed
+    print("abs(-42) =", abs(-42))
+    print("round(3.14159) =", round(3.14159, 2))
+    print("round(3.14159), 3 =", round(3.14159, 3))
+    print("52, 64, 37, 89, 34 =", max(52, 64, 37, 89, 34))
+    print("52, 64, 37, 89, 34 =", min(52, 64, 37, 89, 34))
+
+    #math module functions: must be imported
+    a = 3
+    b = 4
+    hypotenuse = sqrt(a ** 2 + b ** 2)
+    print("hypotenuse:", hypotenuse)
+
+    print("\n\nfind the area of a circle":)
+    radius = 2.5
+    area = pi * radius ** 2
+    print("area of circle:", round(area, 2))
+
+    print("\n\n Roundoff error: binary can't store 4.35 exactly")
+    price = 4.35
+    quantity = 100
+    total = price * quantity
+    print("total:", total)
+    print("rounded:", round(total, 2))
